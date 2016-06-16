@@ -60,5 +60,5 @@ Scenario Outline: : Check response contant for GET
 		|URL						| Element	| Contant	    	     |
 		|http://httpbin.org/get		| origin	| 52.22.60.255           |
 		|http://httpbin.org/get		| url	    | http://httpbin.org/get |
-		|http://httpbin.org/ip 		| origin	| 75.181.163.157         |
+		|http://httpbin.org/ip 		| origin	| 52.22.60.255           |
 		
