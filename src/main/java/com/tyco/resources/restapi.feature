@@ -27,11 +27,11 @@ Scenario Outline: : Check response contant type for GET
 		
 Scenario Outline: : Check Http Status Code for POST 
 	Given I request the post endpoint "<URL>": 
-		    """
+		"""
 			{
-                "origin": "75.181.163.157"
-            }
-            """ 
+  				"origin": "75.181.163.157"
+			}
+			""" 
 	Then I check the status code "<Status Code>" 
 	
 	Examples: 
@@ -41,16 +41,16 @@ Scenario Outline: : Check Http Status Code for POST
 		
 Scenario Outline: : Check response contant for POST 
 	Given I request the post endpoint "<URL>": 
-		    """
+		"""
 			{
-                "origin": "75.181.163.157"
-            }
-            """ 
+  				"origin": "75.181.163.157"
+			}
+			""" 
 	Then I check the response contant with "<Element>" "<Contant>" 
 	
 	Examples: 
-		|URL						| Element	| Contant                 |
-		|http://httpbin.org/post	| url       | http://httpbin.org/post |
+		|URL						| Element	| Contant	    	     |
+		|http://httpbin.org/post	| origin	| 75.181.163.157         |
 		
 Scenario Outline: : Check response contant for GET 
 	Given I request the endpoint "<URL>" 
@@ -58,6 +58,7 @@ Scenario Outline: : Check response contant for GET
 	
 	Examples: 
 		|URL						| Element	| Contant	    	     |
-		|http://httpbin.org/gzip	| gzipped	| true                   |
+		|http://httpbin.org/get		| origin	| 75.181.163.157         |
 		|http://httpbin.org/get		| url	    | http://httpbin.org/get |
-		|http://httpbin.org/deflate	| deflated	| true                   |
+		|http://httpbin.org/ip 		| origin	| 75.181.163.157         |
+		
