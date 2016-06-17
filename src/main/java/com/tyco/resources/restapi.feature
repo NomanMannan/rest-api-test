@@ -26,10 +26,10 @@ Scenario Outline: : Check response contant type for GET
 		|http://httpbin.org/header  | text/html				  |
 		
 Scenario Outline: : Check Http Status Code for POST 
-	Given I request the post endpoint "<URL>": 
+	Given I request the post endpoint "<URL>" : 
 		    """
 			{
-                "method": "POST"
+	           "method": "POST"
             }
             """ 
 	Then I check the status code "<Status Code>" 
@@ -40,10 +40,10 @@ Scenario Outline: : Check Http Status Code for POST
 		|http://httpbin.org/po		| 404	     |
 		
 Scenario Outline: : Check response contant for POST 
-	Given I request the post endpoint "<URL>": 
+	Given I request the post endpoint "<URL>" : 
 		    """
 			{
-                "method": "POST"
+	           "method": "POST"
             }
             """ 
 	Then I check the response contant with "<Element>" "<Contant>" 
@@ -61,4 +61,3 @@ Scenario Outline: : Check response contant for GET
 		|http://httpbin.org/gzip	| gzipped	| true                   |
 		|http://httpbin.org/get		| url	    | http://httpbin.org/get |
 		|http://httpbin.org/deflate	| deflated	| true                   |
-		
