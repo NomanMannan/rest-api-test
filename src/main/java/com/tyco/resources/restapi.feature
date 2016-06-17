@@ -49,8 +49,8 @@ Scenario Outline: : Check response contant for POST
 	Then I check the response contant with "<Element>" "<Contant>" 
 	
 	Examples: 
-		|URL						| Element	| Contant    |
-		|http://httpbin.org/post	| method    | POST       |
+		|URL						| Element	| Contant                 |
+		|http://httpbin.org/post	| url       | http://httpbin.org/post |
 		
 Scenario Outline: : Check response contant for GET 
 	Given I request the endpoint "<URL>" 
