@@ -60,4 +60,4 @@ Scenario Outline: : Check response contant for GET
 		|URL						| Element	| Contant	    	     |
 		|http://httpbin.org/gzip	| gzipped	| true                   |
 		|http://httpbin.org/get		| url	    | http://httpbin.org/get |
-		|http://httpbin.org/deflate | deflated	| true                   |
+		#|http://httpbin.org/deflate | deflated	| true                   |
