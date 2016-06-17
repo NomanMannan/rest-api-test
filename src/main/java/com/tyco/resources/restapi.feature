@@ -29,7 +29,7 @@ Scenario Outline: : Check Http Status Code for POST
 	Given I request the post endpoint "<URL>": 
 		    """
 			{
-	           "method": "POST"
+                "origin": "75.181.163.157"
             }
             """ 
 	Then I check the status code "<Status Code>" 
@@ -43,7 +43,7 @@ Scenario Outline: : Check response contant for POST
 	Given I request the post endpoint "<URL>": 
 		    """
 			{
-	           "method": "POST"
+                "origin": "75.181.163.157"
             }
             """ 
 	Then I check the response contant with "<Element>" "<Contant>" 
