@@ -26,7 +26,7 @@ Scenario Outline: : Check response contant type for GET
 		|http://httpbin.org/header  | text/html				  |
 		
 Scenario Outline: : Check Http Status Code for POST 
-	Given I request the post endpoint "<URL>" : 
+	Given I request the post endpoint "<URL>": 
 		    """
 			{
 	           "method": "POST"
@@ -40,7 +40,7 @@ Scenario Outline: : Check Http Status Code for POST
 		|http://httpbin.org/po		| 404	     |
 		
 Scenario Outline: : Check response contant for POST 
-	Given I request the post endpoint "<URL>" : 
+	Given I request the post endpoint "<URL>": 
 		    """
 			{
 	           "method": "POST"
