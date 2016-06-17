@@ -58,6 +58,6 @@ Scenario Outline: : Check response contant for GET
 	
 	Examples: 
 		|URL						| Element	| Contant	    	     |
-		|http://httpbin.org/get		| origin	| 75.181.163.157         |
+		|http://httpbin.org/gzip	| gzipped	| true                   |
 		|http://httpbin.org/get		| url	    | http://httpbin.org/get |
-		|http://httpbin.org/ip 		| origin	| 75.181.163.157         |
+		|http://httpbin.org/deflate | deflated	| true                   |
