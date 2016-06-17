@@ -29,7 +29,7 @@ Scenario Outline: : Check Http Status Code for POST
 	Given I request the post endpoint "<URL>": 
 		    """
 			{
-                "url": "http://httpbin.org/get"
+                "gzipped": true
             }
             """ 
 	Then I check the status code "<Status Code>" 
@@ -43,14 +43,14 @@ Scenario Outline: : Check response contant for POST
 	Given I request the post endpoint "<URL>": 
 		    """
 			{
-                "url": "http://httpbin.org/get"
+                "gzipped": true
             }
             """ 
 	Then I check the response contant with "<Element>" "<Contant>" 
 	
 	Examples: 
-		|URL						| Element	| Contant	                   |
-		|http://httpbin.org/post	| url	    | http://httpbin.org/get       |
+		|URL						| Element	| Contant    |
+		|http://httpbin.org/post	| gzipped   | true       |
 		
 Scenario Outline: : Check response contant for GET 
 	Given I request the endpoint "<URL>" 
