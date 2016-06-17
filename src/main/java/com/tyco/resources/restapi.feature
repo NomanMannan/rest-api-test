@@ -49,8 +49,8 @@ Scenario Outline: : Check response contant for POST
 	Then I check the response contant with "<Element>" "<Contant>" 
 	
 	Examples: 
-		|URL						| Element	| Contant	    	     |
-		|http://httpbin.org/post	| origin	| 75.181.163.157         |
+		|URL						| Element	| Contant	      	      |
+		|http://httpbin.org/post	| url	    | http://httpbin.org/post |
 		
 Scenario Outline: : Check response contant for GET 
 	Given I request the endpoint "<URL>" 
@@ -61,4 +61,3 @@ Scenario Outline: : Check response contant for GET
 		|http://httpbin.org/get		| origin	| 75.181.163.157         |
 		|http://httpbin.org/get		| url	    | http://httpbin.org/get |
 		|http://httpbin.org/ip 		| origin	| 75.181.163.157         |
-		
