@@ -27,11 +27,11 @@ Scenario Outline: : Check response contant type for GET
 		
 Scenario Outline: : Check Http Status Code for POST 
 	Given I request the post endpoint "<URL>": 
-		"""
+		    """
 			{
-  				"name": "noman"
-			}
-			""" 
+                "url": "http://httpbin.org/get"
+            }
+            """ 
 	Then I check the status code "<Status Code>" 
 	
 	Examples: 
@@ -41,16 +41,16 @@ Scenario Outline: : Check Http Status Code for POST
 		
 Scenario Outline: : Check response contant for POST 
 	Given I request the post endpoint "<URL>": 
-		"""
+		    """
 			{
-  				"name": "noman"
-			}
-			""" 
+                "url": "http://httpbin.org/get"
+            }
+            """ 
 	Then I check the response contant with "<Element>" "<Contant>" 
 	
 	Examples: 
-		|URL						| Element	| Contant	  |
-		|http://httpbin.org/post	| name	    | noman       |
+		|URL						| Element	| Contant	                   |
+		|http://httpbin.org/post	| url	    | http://httpbin.org/get       |
 		
 Scenario Outline: : Check response contant for GET 
 	Given I request the endpoint "<URL>" 
