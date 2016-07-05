@@ -5,7 +5,7 @@ Scenario Outline: : Check Http Status Code for GET
 	Then I check the status code "<Status Code>" 
 	
 	Examples: 
-		|URL						| Status Code|
+		|URL						| Status Code |
 		|http://httpbin.org/get		| 200	     |
 		|http://httpbin.org/ge		| 404	     |
 		|http://httpbin.org/headers | 200		 |
